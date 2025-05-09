@@ -1,6 +1,6 @@
 
 import React from "react";
-import { ArrowRight, Bridge, Connect, View, Wallet } from "lucide-react";
+import { ArrowRight, Wallet, Eye, ArrowLeftRight, Network } from "lucide-react";
 
 interface FeatureCardProps {
   title: string;
@@ -14,11 +14,11 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ title, description, icon }) =
       case "wallet":
         return <Wallet className="h-6 w-6 text-forge-purple" />;
       case "view":
-        return <View className="h-6 w-6 text-forge-purple" />;
+        return <Eye className="h-6 w-6 text-forge-purple" />;
       case "bridge":
-        return <Bridge className="h-6 w-6 text-forge-purple" />;
+        return <ArrowLeftRight className="h-6 w-6 text-forge-purple" />;
       case "connect":
-        return <Connect className="h-6 w-6 text-forge-purple" />;
+        return <Network className="h-6 w-6 text-forge-purple" />;
       default:
         return <ArrowRight className="h-6 w-6 text-forge-purple" />;
     }
